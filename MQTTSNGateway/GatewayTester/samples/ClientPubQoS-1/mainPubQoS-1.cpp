@@ -97,7 +97,7 @@ void publishTopic1(void)
     char payload[300];
     sprintf(payload, "publish \"ty4tw/Topic1\" \n");
     uint8_t qos = 3;
-    PUBLISH(1,(uint8_t*)payload, strlen(payload), qos);
+    PUBLISH("tt",(uint8_t*)payload, strlen(payload), qos);
 }
 
 void publishTopic2(void)
@@ -105,7 +105,7 @@ void publishTopic2(void)
     char payload[300];
     sprintf(payload, "publish \"ty4tw/topic2\" \n");
     uint8_t qos = 3;
-    PUBLISH(2,(uint8_t*)payload, strlen(payload), qos);
+    PUBLISH("tt",(uint8_t*)payload, strlen(payload), qos);
 }
 
 void publishTopic57(void)
@@ -113,7 +113,7 @@ void publishTopic57(void)
     char payload[300];
     sprintf(payload, "publish \"ty4tw/topic57\" \n");
     uint8_t qos = 3;
-    PUBLISH(5,(uint8_t*)payload, strlen(payload), qos);
+    PUBLISH("tt",(uint8_t*)payload, strlen(payload), qos);
 }
 
 

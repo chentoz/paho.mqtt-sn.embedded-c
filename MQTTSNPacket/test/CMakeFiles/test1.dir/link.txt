@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/test1.dir/test1.o  -o test1 -Wl,-rpath,/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src ../src/libMQTTSNPacketClient.so ../src/libMQTTSNPacketServer.so 

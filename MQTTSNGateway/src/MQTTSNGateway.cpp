@@ -23,125 +23,125 @@
 #include <string.h>
 using namespace MQTTSNGW;
 
-char* currentDateTime(void);
+char *currentDateTime(void);
 
 /*=====================================
  Class Gateway
  =====================================*/
-MQTTSNGW::Gateway* theGateway = nullptr;
+MQTTSNGW::Gateway *theGateway = nullptr;
 
 Gateway::Gateway(void)
 {
-    theMultiTaskProcess = this;
-    theProcess = this;
-    _packetEventQue.setMaxSize(MAX_INFLIGHTMESSAGES * MAX_CLIENTS);
-    _clientList = new ClientList();
-    _adapterManager = new AdapterManager(this);
-    _topics = new Topics();
+	theMultiTaskProcess = this;
+	theProcess = this;
+	_packetEventQue.setMaxSize(MAX_INFLIGHTMESSAGES * MAX_CLIENTS);
+	_clientList = new ClientList();
+	_adapterManager = new AdapterManager(this);
+	_topics = new Topics();
 }
 
 Gateway::~Gateway()
 {
-	if ( _params.loginId )
+	if (_params.loginId)
 	{
 		free(_params.loginId);
 	}
-	if ( _params.password )
+	if (_params.password)
 	{
 		free(_params.password);
 	}
-	if ( _params.gatewayName )
+	if (_params.gatewayName)
 	{
 		free(_params.gatewayName);
 	}
-	if ( _params.brokerName )
+	if (_params.brokerName)
 	{
 		free(_params.brokerName);
 	}
-	if ( _params.port )
+	if (_params.port)
 	{
 		free(_params.port);
 	}
-	if ( _params.portSecure )
+	if (_params.portSecure)
 	{
 		free(_params.portSecure);
 	}
-	if ( _params.certKey )
+	if (_params.certKey)
 	{
 		free(_params.certKey);
 	}
-	if ( _params.privateKey )
+	if (_params.privateKey)
 	{
 		free(_params.privateKey);
 	}
-	if ( _params.rootCApath )
+	if (_params.rootCApath)
 	{
 		free(_params.rootCApath);
 	}
-	if ( _params.rootCAfile )
+	if (_params.rootCAfile)
 	{
 		free(_params.rootCAfile);
 	}
-	if ( _params.clientListName )
+	if (_params.clientListName)
 	{
 		free(_params.clientListName);
 	}
-	if ( _params.predefinedTopicFileName )
+	if (_params.predefinedTopicFileName)
 	{
-		free( _params.predefinedTopicFileName);
+		free(_params.predefinedTopicFileName);
 	}
-	if ( _params.configName )
+	if (_params.configName)
 	{
 		free(_params.configName);
 	}
 
-    if ( _params.qosMinusClientListName )
-    {
-        free(_params.qosMinusClientListName);
-    }
+	if (_params.qosMinusClientListName)
+	{
+		free(_params.qosMinusClientListName);
+	}
 
-    if ( _adapterManager )
-    {
-        delete _adapterManager;
-    }
-    if ( _clientList )
-    {
-        delete _clientList;
-    }
+	if (_adapterManager)
+	{
+		delete _adapterManager;
+	}
+	if (_clientList)
+	{
+		delete _clientList;
+	}
 
-    if ( _topics )
+	if (_topics)
 	{
 		delete _topics;
 	}
 }
 
-int Gateway::getParam(const char* parameter, char* value)
+int Gateway::getParam(const char *parameter, char *value)
 {
-    return MultiTaskProcess::getParam(parameter, value);
+	return MultiTaskProcess::getParam(parameter, value);
 }
 
-char* Gateway::getClientListFileName(void)
+char *Gateway::getClientListFileName(void)
 {
 	return _params.clientListName;
 }
 
-char* Gateway::getPredefinedTopicFileName(void)
+char *Gateway::getPredefinedTopicFileName(void)
 {
 	return _params.predefinedTopicFileName;
 }
 
-void Gateway::initialize(int argc, char** argv)
+void Gateway::initialize(int argc, char **argv)
 {
 	char param[MQTTSNGW_PARAM_MAX];
 	string fileName;
-    theGateway = this;
+	theGateway = this;
 
 	MultiTaskProcess::initialize(argc, argv);
 	resetRingBuffer();
 
 	_params.configDir = *getConfigDirName();
-    fileName = _params.configDir + *getConfigFileName();
-    _params.configName = strdup(fileName.c_str());
+	fileName = _params.configDir + *getConfigFileName();
+	_params.configName = strdup(fileName.c_str());
 
 	if (getParam("BrokerName", param) == 0)
 	{
@@ -161,9 +161,9 @@ void Gateway::initialize(int argc, char** argv)
 		_params.certKey = strdup(param);
 	}
 	if (getParam("PrivateKey", param) == 0)
-		{
-			_params.privateKey = strdup(param);
-		}
+	{
+		_params.privateKey = strdup(param);
+	}
 	if (getParam("RootCApath", param) == 0)
 	{
 		_params.rootCApath = strdup(param);
@@ -180,7 +180,7 @@ void Gateway::initialize(int argc, char** argv)
 
 	if (_params.gatewayId == 0 || _params.gatewayId > 255)
 	{
-		throw Exception( "Gateway::initialize: invalid Gateway Id");
+		throw Exception("Gateway::initialize: invalid Gateway Id");
 	}
 
 	if (getParam("GatewayName", param) == 0)
@@ -188,9 +188,9 @@ void Gateway::initialize(int argc, char** argv)
 		_params.gatewayName = strdup(param);
 	}
 
-	if (_params.gatewayName == 0 )
+	if (_params.gatewayName == 0)
 	{
-		throw Exception( "Gateway::initialize: Gateway Name is missing.");
+		throw Exception("Gateway::initialize: Gateway Name is missing.");
 	}
 
 	_params.mqttVersion = DEFAULT_MQTT_VERSION;
@@ -236,7 +236,7 @@ void Gateway::initialize(int argc, char** argv)
 
 	if (getParam("PredefinedTopic", param) == 0)
 	{
-		if ( !strcasecmp(param, "YES") )
+		if (!strcasecmp(param, "YES"))
 		{
 			_params.predefinedTopic = true;
 			if (getParam("PredefinedTopicList", param) == 0)
@@ -248,7 +248,7 @@ void Gateway::initialize(int argc, char** argv)
 
 	if (getParam("AggregatingGateway", param) == 0)
 	{
-		if ( !strcasecmp(param, "YES") )
+		if (!strcasecmp(param, "YES"))
 		{
 			_params.aggregatingGw = true;
 		}
@@ -256,7 +256,7 @@ void Gateway::initialize(int argc, char** argv)
 
 	if (getParam("Forwarder", param) == 0)
 	{
-		if ( !strcasecmp(param, "YES") )
+		if (!strcasecmp(param, "YES"))
 		{
 			_params.forwarder = true;
 		}
@@ -264,23 +264,22 @@ void Gateway::initialize(int argc, char** argv)
 
 	if (getParam("QoS-1", param) == 0)
 	{
-		if ( !strcasecmp(param, "YES") )
+		if (!strcasecmp(param, "YES"))
 		{
 			_params.qosMinus1 = true;
 		}
 	}
 
+	/*  Initialize adapters */
+	_adapterManager->initialize(_params.gatewayName, _params.aggregatingGw, _params.forwarder, _params.qosMinus1);
 
-		/*  Initialize adapters */
-		_adapterManager->initialize( _params.gatewayName, _params.aggregatingGw, _params.forwarder, _params.qosMinus1);
-
-		/*  Setup ClientList and Predefined topics  */
-		_clientList->initialize(_params.aggregatingGw);
+	/*  Setup ClientList and Predefined topics  */
+	_clientList->initialize(_params.aggregatingGw);
 }
 
 void Gateway::run(void)
 {
-    /* write prompts */
+	/* write prompts */
 	_lightIndicator.redLight(true);
 	WRITELOG("\n%s", PAHO_COPYRIGHT4);
 	WRITELOG("\n%s\n", PAHO_COPYRIGHT0);
@@ -292,15 +291,15 @@ void Gateway::run(void)
 	WRITELOG("\n%s %s has been started.\n\n", currentDateTime(), _params.gatewayName);
 	WRITELOG(" ConfigFile: %s\n", _params.configName);
 
-	if ( _params.clientListName )
+	if (_params.clientListName)
 	{
 		WRITELOG(" ClientList: %s\n", _params.clientListName);
 	}
 
-    if (  _params.predefinedTopicFileName )
-    {
-        WRITELOG(" PreDefFile: %s\n", _params.predefinedTopicFileName);
-    }
+	if (_params.predefinedTopicFileName)
+	{
+		WRITELOG(" PreDefFile: %s\n", _params.predefinedTopicFileName);
+	}
 
 	WRITELOG(" SensorN/W:  %s\n", _sensorNetwork.getDescription());
 	WRITELOG(" Broker:     %s : %s, %s\n", _params.brokerName, _params.port, _params.portSecure);
@@ -309,12 +308,11 @@ void Gateway::run(void)
 	WRITELOG(" CertKey:    %s\n", _params.certKey);
 	WRITELOG(" PrivateKey: %s\n\n\n", _params.privateKey);
 
-
 	/* Run Tasks until CTRL+C entred */
 	MultiTaskProcess::run();
 
 	/* stop Tasks */
-	Event* ev = new Event();
+	Event *ev = new Event();
 	ev->setStop();
 	_packetEventQue.post(ev);
 	ev = new Event();
@@ -331,64 +329,60 @@ void Gateway::run(void)
 	_lightIndicator.allLightOff();
 }
 
-EventQue* Gateway::getPacketEventQue()
+EventQue *Gateway::getPacketEventQue()
 {
 	return &_packetEventQue;
 }
 
-EventQue* Gateway::getClientSendQue()
+EventQue *Gateway::getClientSendQue()
 {
 	return &_clientSendQue;
 }
 
-EventQue* Gateway::getBrokerSendQue()
+EventQue *Gateway::getBrokerSendQue()
 {
 	return &_brokerSendQue;
 }
 
-ClientList* Gateway::getClientList()
+ClientList *Gateway::getClientList()
 {
 	return _clientList;
 }
 
-SensorNetwork* Gateway::getSensorNetwork()
+SensorNetwork *Gateway::getSensorNetwork()
 {
 	return &_sensorNetwork;
 }
 
-LightIndicator* Gateway::getLightIndicator()
+LightIndicator *Gateway::getLightIndicator()
 {
 	return &_lightIndicator;
 }
 
-GatewayParams* Gateway::getGWParams(void)
+GatewayParams *Gateway::getGWParams(void)
 {
 	return &_params;
 }
 
-AdapterManager* Gateway::getAdapterManager(void)
+AdapterManager *Gateway::getAdapterManager(void)
 {
-    return _adapterManager;
+	return _adapterManager;
 }
 
-Topics* Gateway::getTopics(void)
+Topics *Gateway::getTopics(void)
 {
-    return _topics;
+	return _topics;
 }
 
 bool Gateway::hasSecureConnection(void)
 {
-	return (  _params.certKey
-			&& _params.privateKey
-			&& _params.rootCApath
-			&& _params.rootCAfile );
+	return (_params.certKey && _params.privateKey && _params.rootCApath && _params.rootCAfile);
 }
 /*=====================================
  Class EventQue
  =====================================*/
 EventQue::EventQue()
 {
-
 }
 
 EventQue::~EventQue()
@@ -402,18 +396,18 @@ EventQue::~EventQue()
 	_mutex.unlock();
 }
 
-void  EventQue::setMaxSize(uint16_t maxSize)
+void EventQue::setMaxSize(uint16_t maxSize)
 {
 	_que.setMaxSize((int)maxSize);
 }
 
-Event* EventQue::wait(void)
+Event *EventQue::wait(void)
 {
-	Event* ev = nullptr;
+	Event *ev = nullptr;
 
-	while(ev == nullptr)
+	while (ev == nullptr)
 	{
-		if ( _que.size() == 0 )
+		if (_que.size() == 0)
 		{
 			_sem.wait();
 		}
@@ -425,10 +419,10 @@ Event* EventQue::wait(void)
 	return ev;
 }
 
-Event* EventQue::timedwait(uint16_t millsec)
+Event *EventQue::timedwait(uint16_t millsec)
 {
-	Event* ev;
-	if ( _que.size() == 0 )
+	Event *ev;
+	if (_que.size() == 0)
 	{
 		_sem.timedwait(millsec);
 	}
@@ -448,12 +442,12 @@ Event* EventQue::timedwait(uint16_t millsec)
 	return ev;
 }
 
-void EventQue::post(Event* ev)
+void EventQue::post(Event *ev)
 {
-	if ( ev )
+	if (ev)
 	{
 		_mutex.lock();
-		if ( _que.post(ev) )
+		if (_que.post(ev))
 		{
 			_sem.post();
 		}
@@ -473,13 +467,11 @@ int EventQue::size()
 	return sz;
 }
 
-
 /*=====================================
  Class Event
  =====================================*/
 Event::Event()
 {
-
 }
 
 Event::~Event()
@@ -505,28 +497,28 @@ EventType Event::getEventType()
 	return _eventType;
 }
 
-void Event::setClientSendEvent(Client* client, MQTTSNPacket* packet)
+void Event::setClientSendEvent(Client *client, MQTTSNPacket *packet)
 {
 	_client = client;
 	_eventType = EtClientSend;
 	_mqttSNPacket = packet;
 }
 
-void Event::setBrokerSendEvent(Client* client, MQTTGWPacket* packet)
+void Event::setBrokerSendEvent(Client *client, MQTTGWPacket *packet)
 {
 	_client = client;
 	_eventType = EtBrokerSend;
 	_mqttGWPacket = packet;
 }
 
-void Event::setClientRecvEvent(Client* client, MQTTSNPacket* packet)
+void Event::setClientRecvEvent(Client *client, MQTTSNPacket *packet)
 {
 	_client = client;
 	_eventType = EtClientRecv;
 	_mqttSNPacket = packet;
 }
 
-void Event::setBrokerRecvEvent(Client* client, MQTTGWPacket* packet)
+void Event::setBrokerRecvEvent(Client *client, MQTTGWPacket *packet)
 {
 	_client = client;
 	_eventType = EtBrokerRecv;
@@ -543,37 +535,35 @@ void Event::setStop(void)
 	_eventType = EtStop;
 }
 
-void Event::setBrodcastEvent(MQTTSNPacket* msg)
+void Event::setBrodcastEvent(MQTTSNPacket *msg)
 {
 	_mqttSNPacket = msg;
 	_eventType = EtBroadcast;
 }
 
-void Event::setClientSendEvent(SensorNetAddress* addr, MQTTSNPacket* msg)
+void Event::setClientSendEvent(SensorNetAddress *addr, MQTTSNPacket *msg)
 {
 	_eventType = EtSensornetSend;
 	_sensorNetAddr = addr;
 	_mqttSNPacket = msg;
 }
 
-Client* Event::getClient(void)
+Client *Event::getClient(void)
 {
 	return _client;
 }
 
-SensorNetAddress* Event::getSensorNetAddress(void)
+SensorNetAddress *Event::getSensorNetAddress(void)
 {
 	return _sensorNetAddr;
 }
 
-MQTTSNPacket* Event::getMQTTSNPacket()
+MQTTSNPacket *Event::getMQTTSNPacket()
 {
 	return _mqttSNPacket;
 }
 
-MQTTGWPacket* Event::getMQTTGWPacket(void)
+MQTTGWPacket *Event::getMQTTGWPacket(void)
 {
 	return _mqttGWPacket;
 }
-
-

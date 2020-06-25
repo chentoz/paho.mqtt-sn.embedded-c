@@ -42,7 +42,7 @@ int main(int argc, char** argv)
 	int retained = 0;
 	short packetid = 0;
 	char *host = "127.0.0.1";
-	int port = 1883;
+	int port = 1886;
 
 	mysock = transport_open();
 	if(mysock < 0)

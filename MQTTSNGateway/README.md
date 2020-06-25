@@ -135,6 +135,3 @@ Uncomment the line 62, 63 in MQTTSNDefines.h then you can get more precise logs.
 //#define DEBUG          // print out log for debug
 //#define DEBUG_NWSTACK  // print out SensorNetwork log
 ```
-
-
-
