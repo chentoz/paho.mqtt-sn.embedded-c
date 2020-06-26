@@ -68,6 +68,7 @@ void LPublishManager::publish(const char* topicName, Payload* payload, uint8_t q
 
 void LPublishManager::publish(const char* topicName, uint8_t* payload, uint16_t len, uint8_t qos, bool retain)
 {
+    printf("qos : %d", qos);
     uint16_t msgId = 0;
     uint8_t topicType = MQTTSN_TOPIC_TYPE_SHORT;
     if ( strlen(topicName) > 2 )

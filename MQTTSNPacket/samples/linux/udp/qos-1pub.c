@@ -25,17 +25,28 @@
 
 #include "MQTTSNPacket.h"
 #include "lowlevel.h"
+#include "header.h"
 
+#include <stdio.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <termios.h>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int rc = 0;
 	int mysock;
 	unsigned char buf[200];
 	int buflen = sizeof(buf);
 	MQTTSN_topicid topic;
-	unsigned char* payload = (unsigned char*)"mypayload";
-	int payloadlen = strlen((char*)payload);
+	unsigned char *payload = (unsigned char *)"mypayload";
+	int payloadlen = strlen((char *)payload);
 	int len = 0;
 	int dup = 0;
 	int qos = 3;
@@ -45,7 +56,7 @@ int main(int argc, char** argv)
 	int port = 1883;
 
 	mysock = lowlevel_open();
-	if(mysock < 0)
+	if (mysock < 0)
 		return mysock;
 
 	if (argc > 1)
@@ -54,13 +65,20 @@ int main(int argc, char** argv)
 	if (argc > 2)
 		port = atoi(argv[2]);
 
+	struct sockaddr_in addr;
+	addr.sin_family = AF_INET;
+	addr.sin_port = htons(port);
+	inet_aton(host, &addr.sin_addr.s_addr);
+
+	bind(mysock, (struct sockaddr *)&addr, sizeof(addr));		
+
 	printf("Sending to hostname %s port %d\n", host, port);
 
 	/* publish with short name */
 	topic.type = MQTTSN_TOPIC_TYPE_SHORT;
 	memcpy(topic.data.short_name, "tt", 2);
 	len = MQTTSNSerialize_publish(buf, buflen, dup, qos, retained, packetid,
-			topic, payload, payloadlen);
+								  topic, payload, payloadlen);
 
 	rc = lowlevel_sendPacketBuffer(host, port, buf, len);
 

@@ -26,6 +26,7 @@
 #include "MQTTSNPacket.h"
 #include "transport.h"
 
+#include "header.h"
 
 int main(int argc, char** argv)
 {
@@ -54,6 +55,14 @@ int main(int argc, char** argv)
 	if (argc > 2)
 		port = atoi(argv[2]);
 
+	struct sockaddr_in addr;
+	addr.sin_family = AF_INET;
+	addr.sin_port = htons(20001);
+	inet_aton("192.168.31.86", &addr.sin_addr.s_addr);
+
+	bind(mysock, (struct sockaddr *)&addr, sizeof(addr));
+
+	printf("Echo hello /n");
 	printf("Sending to hostname %s port %d\n", host, port);
 
 	/* publish with short name */

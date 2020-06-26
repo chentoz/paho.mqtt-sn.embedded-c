@@ -53,6 +53,7 @@ int main(int argc, char** argv)
 	if (argc > 2)
 		port = atoi(argv[2]);
 
+	printf("Whooopppppsss");
 	printf("Sending to hostname %s port %d\n", host, port);
 
 	options.clientID.cstring = "d:quickstart:udptest:9002f7f1ad23";

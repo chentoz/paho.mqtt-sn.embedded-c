@@ -1,0 +1,142 @@
+[
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNConnectClient.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNConnectClient.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNConnectClient.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNPacket.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNPacket.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNPacket.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNSearchClient.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSearchClient.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSearchClient.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNSubscribeClient.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSubscribeClient.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSubscribeClient.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNUnsubscribeClient.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNUnsubscribeClient.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNUnsubscribeClient.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNSerializePublish.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSerializePublish.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSerializePublish.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketClient_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketClient.dir/MQTTSNDeserializePublish.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNDeserializePublish.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNDeserializePublish.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNConnectServer.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNConnectServer.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNConnectServer.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNPacket.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNPacket.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNPacket.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNSearchServer.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSearchServer.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSearchServer.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNSubscribeServer.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSubscribeServer.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSubscribeServer.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNUnsubscribeServer.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNUnsubscribeServer.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNUnsubscribeServer.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNSerializePublish.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSerializePublish.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNSerializePublish.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src",
+  "command": "/usr/bin/clang-6.0 -DMQTTSNPacketServer_EXPORTS  -g -fPIC   -o CMakeFiles/MQTTSNPacketServer.dir/MQTTSNDeserializePublish.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNDeserializePublish.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/src/MQTTSNDeserializePublish.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos0pub_register.dir/qos0pub_register.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos0pub_register.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos0pub_register.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos0pub_register.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos0pub.dir/qos0pub.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos0pub.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos0pub.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos0pub.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos-1pub.dir/qos-1pub.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos-1pub.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos-1pub.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos-1pub.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos1pub.dir/qos1pub.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos1pub.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos1pub.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos1pub.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos-1pub_extended.dir/qos-1pub_extended.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos-1pub_extended.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/qos-1pub_extended.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/qos-1pub_extended.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/pub0sub1.dir/pub0sub1.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/pub0sub1.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/pub0sub1.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/samples",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/../src  -g   -o CMakeFiles/pub0sub1.dir/transport.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/transport.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/test",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/../src  -g   -o CMakeFiles/test1.dir/test1.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/test1.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/test1.c"
+},
+{
+  "directory": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/test",
+  "command": "/usr/bin/clang-6.0  -I/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/../src  -g   -o CMakeFiles/test2.dir/test2.o   -c /home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/test2.c",
+  "file": "/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/test/test2.c"
+}
+]

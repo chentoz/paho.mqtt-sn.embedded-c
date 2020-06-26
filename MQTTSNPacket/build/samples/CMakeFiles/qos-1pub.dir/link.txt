@@ -1,0 +1,1 @@
+/usr/bin/clang-6.0 -g  -rdynamic CMakeFiles/qos-1pub.dir/qos-1pub.o CMakeFiles/qos-1pub.dir/transport.o  -o qos-1pub -Wl,-rpath,/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/build/src ../src/libMQTTSNPacketClient.so 

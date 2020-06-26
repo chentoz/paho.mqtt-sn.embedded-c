@@ -39,8 +39,9 @@ CPPFLAGS +=
 INCLUDES += -I$(SUBDIR)
 DEFS :=
 LIBS +=
-LDFLAGS := 
-CXXFLAGS := -Wall -O3 -std=c++11
+LDFLAGS := -g
+# CXXFLAGS := -Wall -O3 -std=c++11
+CXXFLAGS := -Wall -g -std=c++11
 LDADD := 
 OUTDIR := Build
 
