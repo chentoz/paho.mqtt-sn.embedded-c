@@ -11,6 +11,8 @@
 /Debug/
 /core
 
+Build
+
 Build/./travis-build.sh
 ./.git/hooks/post-update.sample
 ./.git/hooks/commit-msg.sample
