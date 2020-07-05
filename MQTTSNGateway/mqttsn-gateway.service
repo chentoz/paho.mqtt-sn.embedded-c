@@ -1,0 +1,16 @@
+[Unit]
+Description=MQTT Gateway Service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/MQTT-SNGateway -f /etc/mqttsn-gateway/gateway.conf
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=mqttsn-gateway # without any quote
+
+[Install]
+WantedBy=multi-user.target
