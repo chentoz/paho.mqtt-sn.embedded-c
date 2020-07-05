@@ -1,8 +1,0 @@
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/rebuild_cache.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/edit_cache.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/qos0pub_register.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/qos0pub.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/qos-1pub.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/qos1pub.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/qos-1pub_extended.dir
-/home/chentoz/repo/paho.mqtt-sn.embedded-c/MQTTSNPacket/samples/CMakeFiles/pub0sub1.dir
