@@ -49,7 +49,6 @@ namespace MQTTSNGW
 #define PROXY_KEEPALIVE_DURATION   (900)   // Seconds
 #define PROXY_RESPONSE_DURATION     (10)   // Seconds
 #define PROXY_MAX_RETRY_CNT          (3)
-
 /*=================================
  *    Data Type
  ==================================*/

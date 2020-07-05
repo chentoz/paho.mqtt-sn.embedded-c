@@ -146,7 +146,6 @@ void ClientRecvTask::run()
 					}
 				}
 			}
-
 			if ( client == nullptr )
 			{
 				client = _gateway->getClientList()->getClient(senderAddr);

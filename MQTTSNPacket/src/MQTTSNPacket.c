@@ -83,8 +83,12 @@ int MQTTSNPacket_encode(unsigned char* buf, int length)
 
 /**
  * Obtains the MQTT-SN packet length from received data
+<<<<<<< HEAD
  * @param buf the buffer that contains the MQTT-SN packet
  * @param buflen the length in bytes of the supplied buffer
+=======
+ * @param getcharfn pointer to function to read the next character from the data source
+>>>>>>> ad86a276b56253f39686bc0a5984b4ebf39fe36f
  * @param value the decoded length returned
  * @return the number of bytes read from the socket
  */

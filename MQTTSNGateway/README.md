@@ -23,7 +23,7 @@ $ make install INSTALL_DIR=/path/to/your_directory CONFIG_DIR=/path/to/your_dire
     
 ### **step2. Execute the Gateway.**     
 
-````    
+````
 $ cd ../../   
 $ ./MQTT-SNGateway [-f Config file name]
 ````   
@@ -134,4 +134,5 @@ Uncomment the line 62, 63 in MQTTSNDefines.h then you can get more precise logs.
  ==================================*/
 //#define DEBUG          // print out log for debug
 //#define DEBUG_NWSTACK  // print out SensorNetwork log
+
 ```

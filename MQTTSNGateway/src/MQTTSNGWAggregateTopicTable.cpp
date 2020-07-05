@@ -50,6 +50,7 @@ AggregateTopicElement::AggregateTopicElement(void)
 AggregateTopicElement::AggregateTopicElement(Topic* topic, Client* client)
 {
 	_topic = topic;
+
 	ClientTopicElement* elm = new ClientTopicElement(client);
 	if ( elm != nullptr )
 	{

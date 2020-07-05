@@ -250,7 +250,6 @@ void UDPPort6::close(void)
 		_sockfdMulticast = -1;
 	}
 }
-
 int UDPPort6::open(const char* ipAddress, uint16_t uniPortNo, const char* broadcastAddr, const char* interfaceName, unsigned int hops)
 {
 	struct addrinfo hints, *res;

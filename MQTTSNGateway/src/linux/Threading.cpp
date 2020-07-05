@@ -165,7 +165,6 @@ void Mutex::unlock(void)
 /*=====================================
  Class Semaphore
  =====================================*/
-
 Semaphore::Semaphore(unsigned int val)
 {
 #ifdef __APPLE__

@@ -38,8 +38,6 @@ AdapterManager::AdapterManager(Gateway* gw)
 	_qosm1Proxy = new QoSm1Proxy(gw);
 	_aggregater = new Aggregater(gw);
 }
-
-
 void AdapterManager::initialize(char* gwName, bool aggregate, bool forwarder, bool qosM1)
 {
     if ( aggregate )
@@ -191,18 +189,33 @@ AggregateTopicElement* AdapterManager::findTopic(Topic* topic)
 }
 
 AggregateTopicElement* AdapterManager::addAggregateTopic(Topic* topic, Client* client)
+=======
+AggregateTopicElement* AdapterManager::createClientList(Topic* topic)
+{
+	return _aggregater->createClientList(topic);
+}
+
+int AdapterManager::addAggregateTopic(Topic* topic, Client* client)
+>>>>>>> ad86a276b56253f39686bc0a5984b4ebf39fe36f
 {
 	return _aggregater->addAggregateTopic(topic, client);
 }
 
+<<<<<<< HEAD
 
 void AdapterManager::removeAggregateTopic(Topic* topic, Client* client)
 {
 	 //_aggregater->removeAggregateTopic(topic, client);
+=======
+void AdapterManager::removeAggregateTopic(Topic* topic, Client* client)
+{
+	 _aggregater->removeAggregateTopic(topic, client);
+>>>>>>> ad86a276b56253f39686bc0a5984b4ebf39fe36f
 }
 
 void AdapterManager::removeAggregateTopicList(Topics* topics, Client* client)
 {
+<<<<<<< HEAD
 
 }
 */

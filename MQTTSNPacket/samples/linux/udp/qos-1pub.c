@@ -71,7 +71,6 @@ int main(int argc, char **argv)
 	inet_aton(host, &addr.sin_addr.s_addr);
 
 	bind(mysock, (struct sockaddr *)&addr, sizeof(addr));		
-
 	printf("Sending to hostname %s port %d\n", host, port);
 
 	/* publish with short name */

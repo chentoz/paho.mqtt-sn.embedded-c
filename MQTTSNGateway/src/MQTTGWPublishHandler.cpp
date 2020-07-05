@@ -297,6 +297,7 @@ void MQTTGWPublishHandler::handleAggregatePublish(Client* client, MQTTGWPacket* 
 		_gateway->getPacketEventQue()->post(ev);
 
 		elm = elm->getNextClientElement();
+
 	}
 }
 

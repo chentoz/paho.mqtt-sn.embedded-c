@@ -307,7 +307,6 @@ void Gateway::run(void)
 	WRITELOG(" RootCAfile: %s\n", _params.rootCAfile);
 	WRITELOG(" CertKey:    %s\n", _params.certKey);
 	WRITELOG(" PrivateKey: %s\n\n\n", _params.privateKey);
-
 	/* Run Tasks until CTRL+C entred */
 	MultiTaskProcess::run();
 
@@ -324,7 +323,6 @@ void Gateway::run(void)
 
 	/* wait until all Task stop */
 	MultiTaskProcess::waitStop();
-
 	WRITELOG("\n\n%s MQTT-SN Gateway  stopped.\n\n", currentDateTime());
 	_lightIndicator.allLightOff();
 }
@@ -395,12 +393,10 @@ EventQue::~EventQue()
 	}
 	_mutex.unlock();
 }
-
 void EventQue::setMaxSize(uint16_t maxSize)
 {
 	_que.setMaxSize((int)maxSize);
 }
-
 Event *EventQue::wait(void)
 {
 	Event *ev = nullptr;
@@ -441,7 +437,6 @@ Event *EventQue::timedwait(uint16_t millsec)
 	_mutex.unlock();
 	return ev;
 }
-
 void EventQue::post(Event *ev)
 {
 	if (ev)

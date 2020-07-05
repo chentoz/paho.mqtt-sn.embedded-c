@@ -179,7 +179,6 @@ bool ClientList::readPredefinedList(const char *fileName, bool aggregate)
     char buf[MAX_CLIENTID_LENGTH + 256];
     size_t pos0, pos1;
     MQTTSNString clientId = MQTTSNString_initializer;
-    ;
     bool rc = false;
 
     if ((fp = fopen(fileName, "r")) != 0)
@@ -449,6 +448,7 @@ Client *ClientList::createPredefinedTopic(MQTTSNString *clientId, string topicNa
         client->_hasPredefTopic = true;
         return client;
     }
+
 }
 
 uint16_t ClientList::getClientCount()

@@ -34,7 +34,6 @@ class QoSm1Proxy : public Adapter
 public:
 	QoSm1Proxy(Gateway* gw);
     ~QoSm1Proxy(void);
-
     void initialize(char* GWnAME);
     bool isActive(void);
 

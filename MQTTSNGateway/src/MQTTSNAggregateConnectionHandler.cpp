@@ -197,6 +197,7 @@ void MQTTSNAggregateConnectionHandler::sendStoredPublish(Client* client)
 
     while  ( ( msg = client->getClientSleepPacket() ) != nullptr )
     {
+
         client->deleteFirstClientSleepPacket();  // pop the que to delete element.
 
         Event* ev = new Event();

@@ -36,8 +36,6 @@ QoSm1Proxy::~QoSm1Proxy(void)
 {
 
 }
-
-
 void QoSm1Proxy::initialize(char* gwName)
 {
     if ( _gateway->hasSecureConnection() )

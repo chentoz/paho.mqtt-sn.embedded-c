@@ -114,6 +114,7 @@ void PacketHandleTask::run()
 		if (ev->getEventType() == EtStop)
 		{
 			WRITELOG("\n%s PacketHandleTask stopped.", currentDateTime());
+			WRITELOG("%s PacketHandleTask stopped.\n", currentDateTime());
 			delete ev;
 			return;
 		}
@@ -149,6 +150,7 @@ void PacketHandleTask::run()
 			if ( adpMgr->isAggregatedClient(client) )
 			{
 				aggregatePacketHandler(client, snPacket);     // client is converted to Aggregater by BrokerSendTask
+				aggregatePacketHandler(client, snPacket);
 			}
 			else
 			{
