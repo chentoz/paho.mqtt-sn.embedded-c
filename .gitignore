@@ -1,3 +1,9 @@
+MQTTSNGateway/MQTTSNPacket/
+Build/
+CMakeFiles/
+*.log
+*.key
+*.*~
 /dep/
 /build/
 /build.paho/
