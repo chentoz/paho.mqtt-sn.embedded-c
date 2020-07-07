@@ -5,6 +5,7 @@ config_dir=/etc/mqttsn-gateway/
 
 rm -rf $config_dir
 mkdir -p $config_dir
+make clean
 make
 make install INSTALL_DIR=$install_dir CONFIG_DIR=$config_dir
 

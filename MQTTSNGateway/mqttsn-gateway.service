@@ -10,7 +10,7 @@ ExecStart=/usr/bin/MQTT-SNGateway -f /etc/mqttsn-gateway/gateway.conf
 
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=mqttsn-gateway # without any quote
+SyslogIdentifier=MQTTSN-Gateway
 
 [Install]
 WantedBy=multi-user.target
